@@ -72,5 +72,6 @@ You should have been doing your work on a local development branch, as instructe
 ### Need to Reach Out? ###
 Feel free to reach out to us if you need anything!
 
-* Andrew Garver / Director of Software Engineering - andrew@porch.software
-* Kyle Ferran / CTO - kyle@porch.software
+* Bruce Cragun / Engineering Manager - bcragun@porch.software
+* Nick Farland / Engineering Manager - nfarland@porch.software
+* Shane Wilks / Engineering Manager - swilks@porch.software
