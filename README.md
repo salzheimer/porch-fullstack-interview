@@ -67,7 +67,10 @@ The following pages are created
 
 ### When You're Finished ###
 
-You should have been doing your work on a local development branch, as instructed above in the "How do I get set up?" section. Once you have completed the exercise, if you have not done so already, please publish your branch. Then submit a Pull Request from your branch (in your forked repo) to a **new branch** in our repo (the repo you forked from) and send us an email, letting us know you are all set. We'll reach out and review your work with you. We're looking forward to it!
+You should have been doing your work on a local development branch, as instructed above in the "How do I get set up?" section. Once you've completed the exercise, push your branch to your fork.
+Then open a Pull Request with base repository: `Porch-Software/fullstack-interview`, base branch: `master` and head repository: your fork, compare: your branch. Double-check the base repo is ours and not your own fork.
+
+Finally, send us an email, letting us know your PR is ready. We'll reach out and review your work with you. We're looking forward to it!
 
 ### Need to Reach Out? ###
 Feel free to reach out to us if you need anything!
