@@ -31,30 +31,30 @@
 
     <!-- Client Table -->
     <div v-else class="overflow-x-auto">
-      <table class="min-w-full divide-y divide-gray-200">
+      <table class="table-fixed min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
           <tr>
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              class="w-1/4 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center"
             >
               First Name
             </th>
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              class="w-1/4 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center"
             >
               Last Name
             </th>
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              class="w-1/4 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center"
             >
               Email
             </th>
             <th
               scope="col"
-              class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+              class="w-1/5 text-xs font-medium text-gray-500 uppercase tracking-wider text-center pl-8"
             >
               Actions
             </th>
@@ -75,7 +75,7 @@
               {{ client.lastName }}
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-              {{ client.email }}
+              <a v-bind:href="'mailto:' + client.email"> {{ client.email }}</a>
             </td>
             <td
               class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
