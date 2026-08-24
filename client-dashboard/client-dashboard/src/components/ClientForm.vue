@@ -321,8 +321,8 @@ export default {
         this.createClient();
       } else {
         this.updateClient();
+        this.$router.push({ name: "ClientDashboard" });
       }
-      this.$router.push({ name: "ClientDashboard" });
     },
     //data exchange functions
     loadClientForEdit() {

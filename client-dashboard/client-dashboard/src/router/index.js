@@ -11,7 +11,7 @@ const routes = [
     component: ()=>import('../views/ClientDashboard.vue')
   },
   {
-    path: '/client/:id',
+    path: '/client/:id?',
     name: 'ClientManagement',
     component: () => import('../views/ClientManagement.vue')
   } 
