@@ -35,4 +35,9 @@ namespace ClientDashboardAPI.Contracts
         public bool? IsPrimary { get; set; }
 
     }
+    public class PhoneNumberTypeResponse
+    {
+        public int Id {get;set;}
+        public string DisplayName{get;set;}
+    }
 }

@@ -97,13 +97,14 @@ namespace ClientDashboardAPI.Controllers
                 LastName = client.LastName,
                 Email = client.Email,
                 IsArchived = client.IsArchived,
-                PhoneNumbers = client.PhoneNumbers.Select(n => new PhoneNumberResponse{
-                        PhoneNumberId = n.PhoneNumberId,
-                        ClientId=n.ClientId,
-                        CountryCode=n.CountryCode,
-                        PhoneNumber = n.Phone,
-                        PhoneNumberType = n.NumberTypeId,
-                        IsPrimary = n.IsPrimary
+                PhoneNumbers = client.PhoneNumbers.Select(n => new PhoneNumberResponse
+                {
+                    PhoneNumberId = n.PhoneNumberId,
+                    ClientId = n.ClientId,
+                    CountryCode = n.CountryCode,
+                    PhoneNumber = n.Phone,
+                    PhoneNumberType = n.NumberTypeId,
+                    IsPrimary = n.IsPrimary
                 }).ToList()
             };
 
@@ -117,11 +118,11 @@ namespace ClientDashboardAPI.Controllers
 
             if (isArchived)
             {
-                return Ok();
+                return Ok("Client archive successfully");
             }
             else
             {
-                return BadRequest();
+                return BadRequest("Archive client failed");
             }
         }
 

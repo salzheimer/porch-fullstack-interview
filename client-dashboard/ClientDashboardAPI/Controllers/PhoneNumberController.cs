@@ -16,10 +16,11 @@ namespace ClientDashboardAPI.Controllers
     public class PhoneNumberController : ControllerBase
     {
         private readonly IPhoneNumberRepository _phoneNumberRepository;
-
-        public PhoneNumberController(IPhoneNumberRepository phoneNumberRepository)
+        private readonly IPhoneNumberTypeRepository _phoneNumberTypeRepository;
+        public PhoneNumberController(IPhoneNumberRepository phoneNumberRepository, IPhoneNumberTypeRepository phoneNumberTypeRepository)
         {
             _phoneNumberRepository = phoneNumberRepository;
+            _phoneNumberTypeRepository = phoneNumberTypeRepository;
         }
 
         [HttpPost]
@@ -108,6 +109,17 @@ namespace ClientDashboardAPI.Controllers
             var clientNumbers = await _phoneNumberRepository.GetClientPhoneNumbersAsync(clientId);
 
             return Ok(clientNumbers);
+        }
+        [HttpGet("types")]
+        public async Task<IActionResult> GetPhoneNumberTypes()
+        {
+            var numberTypes = await _phoneNumberTypeRepository.GetPhoneNumberTypesAsync();
+            
+            return Ok(numberTypes.Select(t=> new PhoneNumberTypeResponse
+            {
+                 Id =t.PhoneNumberTypeId,
+                 DisplayName = t.DisplayName
+            }));
         }
     }
 
